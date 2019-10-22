@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function random (min,max){
+      var min = Math.ceil(min) 
+      var max = Math.floor(max) 
+        return Math.floor(Math.random()*(max-min))+ min
+      }
+        var Number1 = parseInt(prompt("Введіть число від 1 до 5")) 
+        var Number2
+        var secondNumber = random(1,6);
+        if (Number1 && secondNumber == Number1)
+        {
+            alert("Wizard")
+            document.write ("перша спроба"+    Number1 + "<br>")
+        }
+ if (Number1 && secondNumber !== Number1)
+ { 
+     Number2 = parseInt(prompt("Друга спроба. Введіть число від 1 до 5"))
+    } 
+ if (Number2 && secondNumber == Number2)
+        {
+            alert("Wizard")
+            document.write ("друга спроба"+    Number2 + "<br>")
+        }
+        else {
+            alert("Looooooser");
+        document.write("<br> не вгадав. правильно буде" + secondNumber);
+    }
+        </script>
+</body>
+</html>
