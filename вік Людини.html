@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <label>
+                Age
+                <input id="age" type = "number" valua = "11">
+            </label><br>
+            <button id="btn">
+                    Get sum
+                </button><br>
+                <label>
+                        Sum
+                        <input id="sum" type = "text">
+                    </label><br>
+                    <script>
+                            document.getElementById("btn").onclick=function(){
+                          var age=parseInt(document.getElementById("age").value)
+                        
+                          if (age >=18 && age <= 65 )
+                          document.getElementById("sum").value="OK"
+                          else
+                          document.getElementById("sum").value="No"
+                            }
+                             </script>
+</body>
+</html>
