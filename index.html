@@ -7,6 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-   
+    <label>
+        First number
+        <input id="num1" type = "number" valua = "11">
+    </label><br>
+
+   <label>
+        Second number
+        <input id="num2" type = "number" valua = "22">
+    </label><br>
+    <label>
+            Thirty number
+            <input id="num3" type = "number" valua = "33">
+        </label><br>
+    <button id="btn">
+        Get sum
+    </button><br>
+    <label>
+            Sum
+            <input id="sum" type = "number">
+        </label><br>
+   <script>
+  document.getElementById("btn").onclick=function(){
+var n1=parseInt(document.getElementById("num1").value)
+var n2=parseInt(document.getElementById("num2").value)
+var n3=parseInt(document.getElementById("num3").value)
+var s=n1+n2+n3
+document.getElementById("sum").value=s
+
+  }
+   </script>
 </body>
 </html> 
