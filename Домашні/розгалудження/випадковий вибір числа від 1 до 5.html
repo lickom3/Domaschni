@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Задача 1. Комп’ютер загадує число від 1 до 5. Дати можливість користувачу за 2 спроби вгадати загадане комп’ютером число.
+       
+        var userNumber = parseInt(prompt("Введіть число від 1 до 5")) 
+   
+        var secondNumber =  Math.floor(1 +Math.random()*5)
+
+        if (secondNumber == userNumber)
+        {
+            alert("Wizard")
+            document.write ("перша спроба"+    userNumber + "<br>")
+        }
+        else
+        {
+            userNumber = parseInt(prompt("Введіть число від 1 до 5")) 
+            if (secondNumber == userNumber)
+            {
+                alert("Wizard2")
+                
+            }else{
+                alert("Looooooser");
+                document.write("<br> не вгадав. правильно буде" + secondNumber);
+    }
+            }
+        
+
+
+        </script>
+</body>
+</html>
