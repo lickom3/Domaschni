@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <label>
+                Години
+                <input id="hour" type="number">
+            </label> 
+            <label>
+                Хвилини
+                <input id="min" type="number">
+            </label> <br>
+                   
+            <button id="btn">
+                Результат
+            </button> <br>
+        
+            <label>
+                <input id="result" type="string">
+            </label> <br>
+        
+             <script>
+                document.getElementById("btn").onclick=function(){
+                    var hour=parseInt(document.getElementById("hour").value)
+                    var min=parseInt(document.getElementById("min").value)
+                                       
+                    if (hour<8 || hour == 8 && min<30) {
+                    document.getElementById("result").value="Урок ще не розпочався"
+                    }
+                    else if (hour==8 ||hour==9 && min<15)
+                    document.getElementById("result").value="Зараз перший урок"
+                    else if (hour>9 ||hour ==10  &&   min>=30)
+                    document.getElementById("result").value="Зараз другий урок"
+                    else if (hour>10 || hour ==11 && min>=30)
+                    document.getElementById("result").value="Зараз третій урок"
+                    else
+                    document.getElementById("result").value="Уроки закінчилися"
+           
+                }
+            </script>
+</body>
+</html>
