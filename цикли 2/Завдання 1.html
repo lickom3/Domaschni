@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1. З клавіатури вводитяться числа поки не буде введено 0. Знайти суму чисел.*/
+        let sum=0;
+let number
+
+do
+{
+number= parseInt(prompt(`введіть число`))
+  sum=sum+number;
+}
+while(number!=0);
+
+  document.write(`Сума : ${sum}`)      
+        
+        </script>
+</body>
+</html>

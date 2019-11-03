@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        /*11.Комп’ютер загадує випадкове число від 1 до 10. 
+        Вгадати число шляхом введеня можливих варіантів. В кінці вивести кількість спроб користувача. 
+        */
+   let compNumber = 1 +Math.floor(Math.random()*(10-1+1))     
+   let sprob = 0
+   let number
+   do { 
+       number =parseInt(prompt("Введіть число від 1 до 10"))
+     sprob++
+      
+   } while (compNumber!=number);
+
+document.write(`Кількість спроб : ${sprob}`)
+
+        </script>
+</body>
+</html>
