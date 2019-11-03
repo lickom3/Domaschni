@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function getAverageScore(score1,score2,score3) {
+      let sum = score1+score2+score3
+      return sum/3   
+      }  
+      function getGeomAverage(score1,score2,score3) {
+       let prod =score1*score2*score3
+       return Math.pow(prod,1/3)//Корінь третьої степені   
+      }
+
+    function compareAverage_And_AvgGeom(score1,score2,score3) {
+      let avg=getAverageScore(score1,score2,score3)  
+      let avgGeom =getGeomAverage(score1,score2,score3)
+      if (avg>avgGeom) {
+        document.write("Avg>AvgGeom") 
+      } else {
+          if (avg<avgGeom) {
+            document.write("Avg<AvgGeom") 
+          } else {
+            document.write("Avg==AvgGeom") 
+          } 
+      }    
+      }
+      let sc1 = parseFloat(prompt("Score1")) 
+       let sc2 = parseFloat(prompt("Score2")) 
+       let sc3 = parseFloat(prompt("Score3"))
+       compareAverage_And_AvgGeom(sc1,sc2,sc3)
+        
+        </script>
+</body>
+</html>

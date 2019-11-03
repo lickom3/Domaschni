@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let  guessedCount = 0
+      for (let i = 0; i < 6; i++) {
+
+let compNum = 1 +Math.floor(Math.random()*(10-1+1))
+ let userNum = parseInt(prompt("Введіть число від 1 до 10"))
+if (userNum == compNum) {
+    guessedCount++
+}
+document.write(`User: ${userNum}, comp: ${compNum} <br>`)
+      }
+      document.write(`Вгадано: ${guessedCount}`)
+    
+        </script>
+</body>
+</html>

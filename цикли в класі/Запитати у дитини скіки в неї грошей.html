@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let totalMoney = parseInt(prompt("Скільки ви зараз маєте грошей? "))  
+      while (totalMoney<10000) {
+        let money = parseInt(prompt(`Тату дай грошей. ще треба ${10000-totalMoney}`))  
+        totalMoney+=money
+      }
+      document.write("Вітаємо") 
+        
+        </script>
+</body>
+</html>
