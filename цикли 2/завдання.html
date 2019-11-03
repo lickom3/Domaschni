@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+        4.	Знайти середнє арифметичне чисел, 
+        значення яких вводяться з клавіатури. 
+        Введення закінчується після введеня 0. -->
+
+    <script>
+        var i = 0
+        var number1 = 0
+        do {
+            number = parseInt(prompt("Введіть число")) 
+            number1+=number
+                i++
+        }
+        while (number>0) {
+                var res = number1/(i-1)
+        }
+                alert("Програма завершена, введено 0")
+                document.write(`${res}`)
+           
+    </script>
+</body>
+</html>
