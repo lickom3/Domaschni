@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function getAverageScore(score1,score2,score3) {
+      let sum = score1+score2+score3
+      return sum/3   
+      }  
+      let score1 = parseInt(prompt("Яка оцінка з географії")) 
+       let score2 = parseFloat(prompt("Яка оцінка з історії")) 
+       let score3 = parseFloat(prompt("Яка оцінка з математики"))
+       let avg =getAverageScore(score1,score2,score3) 
+       document.write(`Average = ${avg.toFixed(2)}`)
+        
+        </script>
+</body>
+</html>

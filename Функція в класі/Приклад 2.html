@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      function getSalary(rate,benefits,taxi) {
+         let total = rate+rate*benefits/100
+         let salary =total-total*tax/100
+         return salary
+      }  
+       let rate = parseFloat(prompt("Яка у вас ставка?")) 
+       let benefits = parseFloat(prompt("Яка у вас надбавка?")) 
+       let tax = parseFloat(prompt("Який податок?"))
+       let salary =getSalary(rate,benefits,tax) 
+       document.write(`Отримайте на руки: ${salary}`)
+        </script>
+</body>
+</html>
