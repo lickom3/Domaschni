@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <label for="number1">My number 1</label>
+        <input type="number" id="number1"> <br />
+
+        <label for="number2">My number 2</label>
+        <input type="number" id="number2"> <br />
+
+        <label for="number3">My number 3</label>
+        <input type="number" id="number3"> <br />
+
+        <label for="number4">My number 4</label>
+        <input type="number" id="number4"> <br />
+        <button id="startBtnMin">
+            Get min
+        </button> <br />
+        <button id="startBtnTotal">
+            Get total
+        </button> <br />
+
+        <button id="startBtnProd">
+            Get prod
+        </button> <br />
+
+        <button id="startBtnAverage">
+                Get average
+            </button> <br />
+
+        <label for="res">Result</label>
+        <input type="number" id="res">
+        <script>
+            /* Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+1)суму;
+2)добуток;
+3)середнє арифметичне;
+4)мінімальне значення. 
+*/
+            function getTotal(number1, number2, number3, number4) {
+                let total = number1 + number2 + number3 + number4
+                return total
+            }
+
+            function getProduct(number1, number2, number3, number4) {
+                let product = number1 * number2 * number3 * number4
+                return product
+            }
+
+            function getAverage(number1, number2, number3, number4) {
+                let sum = number1 + number2 + number3 + number4
+                return sum / 3
+            }
+
+            function getMin(number1, number2, number3, number4) {
+                let min = number1
+                if (number2 < min)
+                    min = number2
+                if (number3 < min)
+                    min = number3
+                if (number4 < min)
+                    min = number4
+                return min
+            }
+
+
+
+            document.getElementById("startBtnMin").onclick = function () {
+                let n1 = parseFloat(document.getElementById("number1").value)
+                let n2 = parseFloat(document.getElementById("number2").value)
+                let n3 = parseFloat(document.getElementById("number3").value)
+                let n4 = parseFloat(document.getElementById("number4").value)
+                let m = getMin(n1, n2, n3, n4)
+                document.getElementById("res").value = m
+
+            }
+            document.getElementById("startBtnTotal").onclick = function () {
+                let n1 = parseFloat(document.getElementById("number1").value)
+                let n2 = parseFloat(document.getElementById("number2").value)
+                let n3 = parseFloat(document.getElementById("number3").value)
+                let n4 = parseFloat(document.getElementById("number4").value)
+                let m = getTotal(n1, n2, n3, n4)
+                document.getElementById("res").value = m
+            }
+                document.getElementById("startBtnProd").onclick = function () {
+                let n1 = parseFloat(document.getElementById("number1").value)
+                let n2 = parseFloat(document.getElementById("number2").value)
+                let n3 = parseFloat(document.getElementById("number3").value)
+                let n4 = parseFloat(document.getElementById("number4").value)
+                let m = getProduct(n1, n2, n3, n4)
+                document.getElementById("res").value = m
+                }
+
+                document.getElementById("startBtnAverage").onclick = function () {
+                let n1 = parseFloat(document.getElementById("number1").value)
+                let n2 = parseFloat(document.getElementById("number2").value)
+                let n3 = parseFloat(document.getElementById("number3").value)
+                let n4 = parseFloat(document.getElementById("number4").value)
+                let m = getAverage(n1, n2, n3, n4)
+                document.getElementById("res").value = m
+
+
+
+            }            
+        </script>
+
+    </body>
+
+</html>
