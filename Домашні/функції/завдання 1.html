@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--0. Створити функцію, яка за номером місяця повертає пору року, 
+        до якої відноситься цей місяць. -->
+
+     <label>
+        Номер місяця
+        <input id="num" type="number">
+    </label> <br>
+      
+    <button id="btnRes">
+        Get result
+    </button> <br>
+    <label>
+            Пора року
+            <input id="poraroky" type="text">
+        </label> <br>
+
+    <script>
+        function getPoraRoky(num) {
+            
+            switch (num) {
+                case 12, 1, 2: return "Зима"
+                case 3, 4, 5: return "Весна"
+                case 6, 7, 8: return "Літо"
+                case 9, 10, 11: return "Осінь"
+            
+                default: return "Error"
+                    
+            }
+            
+        }
+        document.getElementById("btnRes").onclick=function(){
+            var numrik = parseInt(document.getElementById("num").value)
+            var message = getPoraRoky(numrik)
+            document.getElementById("poraroky").value = message
+        }
+        
+    </script>
+</body>
+</html>
