@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /* 1. Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої 
+категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист 
+(оцінки добре і відмінно), трійочник(є хоча би одна трійка)).*/
+  
+        var a = [4, 5, 3, 3, 5,3]
+        function averageMark(a) {
+            let sum = 0
+            for (let i = 0; i < a.length; i++) {
+                sum += a[i]
+            }
+            sum = sum / a.length
+            return sum
+        }
+        function studentRank(a) {
+            let min = a[0]
+            for (let i = 0; i < a.length; i++) {
+                if (min > a[i])
+                    min = a[i]
+            }
+            switch (min) {
+                case 1:
+                case 2:
+                case 3: return "двійочник"
+                case 4:
+                case 5:
+                case 6: return "трійочник"
+                case 7:
+                case 8:
+                case 9: return "хорошист"
+                case 10:
+                case 11:
+                case 12: return "відмінник"
+                default: return "помилка"
+            }
+        }
+        document.write(` Середній бал:${averageMark(a)} <br> ${studentRank(a)}`)
+    </script>
+</body>
+
+</html>
+
