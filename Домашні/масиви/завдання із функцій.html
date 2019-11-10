@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Задача 5. Створити функції, які переводять:
+Сантиметри у дюйми;
+Кілограми у фунти;
+Кілометри у милі. -->
+
+<body>
+
+    сантиметри:<label><input id="sm" type="number" value=""> </label>
+     -> дюйми:<label><input id="dm" type="number" value=""> </label>
+    <br>
+    <br>
+
+    кілограми:<label><input id="kh" type="number" value=""> </label>
+    ->фунти: <label><input id="funt" type="number" value=""> </label>
+    <br>
+    <br>
+    кілометри:<label><input id="km" type="number" value=""> </label>
+    -> милі:<label><input id="mil" type="number" value=""> </label>
+    <br>
+    <br>
+
+    <button id="btnRes">Перевести</button>
+    <script>
+        function smDm(sm) {
+            return sm / 2.54
+        }
+        function khFn(kh) {
+            return kh / 0.454
+        }
+        function kmMl(km) {
+            return km * 0.6214
+        }
+        document.getElementById("btnRes").onclick = function () {
+            let sm = parseFloat(document.getElementById("sm").value)
+            let kh = parseFloat(document.getElementById("kh").value)
+            let km = parseFloat(document.getElementById("km").value)
+            let dm = smDm(sm)
+            let funt = khFn(kh)
+            let mil = kmMl(km)
+            document.getElementById("dm").value = dm.toFixed(2)
+            document.getElementById("funt").value = funt.toFixed(2)
+            document.getElementById("mil").value = mil.toFixed(2)
+        }
+    </script>
+
+
+</body>
+
+</html>
