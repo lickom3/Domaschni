@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- 4. Дано одновимірний масив, у якому зберігається певна виграшна сума 
+    (елементи заповнюються випадковим чином значеннями від -500 до 500).
+     Надаючи користувачу можливість 
+ вибирати номери елементів  (поки він не відмовиться). 
+ Знаходити сумарний виграш. -->
+
+<body>
+
+    <script>
+        let a = []
+        let b = parseInt(prompt("Введіть кількість спроб"))
+        for (let i = 0; i <b ; i++) {
+            a.push(Math.floor(Math.random() * (500 - (-500) + 1)) - 500)
+        }
+        function userNumbElments() {
+            let stringArray = prompt("Введіть елементи розділені пробілом").split(' ')
+            let arrInt = []
+            for (let i = 0; i < stringArray.length; i++)
+                arrInt.push(parseInt(stringArray[i]))
+            return arrInt
+        }
+        let summ = 0
+        arrInt = userNumbElments()
+        for (let i = 0; i < arrInt.length; i++) {
+            summ += a[arrInt[i] - 1]
+        }
+        document.write(`Ваш выграш: ${summ}
+        <br> Білет був: ${a}`)
+    </script>
+</body>
+
+</html>
