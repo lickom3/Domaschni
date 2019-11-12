@@ -16,25 +16,33 @@
 <body>
 
     <script>
-        let a = []
-        let b = parseInt(prompt("Введіть кількість спроб"))
-        for (let i = 0; i <b ; i++) {
-            a.push(Math.floor(Math.random() * (500 - (-500) + 1)) - 500)
+        function getRandomValue(min,max) {
+            return Math.floor(min +Math.random() * (max - min + 1))
         }
-        function userNumbElments() {
-            let stringArray = prompt("Введіть елементи розділені пробілом").split(' ')
-            let arrInt = []
-            for (let i = 0; i < stringArray.length; i++)
-                arrInt.push(parseInt(stringArray[i]))
-            return arrInt
+        function getRandomArray(elementCount,minValue=-500,maxValue=500) {
+            let arr = [] 
+            for (let i = 0; i <elementCount ; i++) {
+            arr.push(getRandomValue(minValue,maxValue))
+
+            }
+            return arr
         }
-        let summ = 0
-        arrInt = userNumbElments()
-        for (let i = 0; i < arrInt.length; i++) {
-            summ += a[arrInt[i] - 1]
-        }
-        document.write(`Ваш выграш: ${summ}
-        <br> Білет був: ${a}`)
+
+function game(gameFieldLength) {
+    const gameFild=getRandomArray(gameFieldLength)
+    let sum=0
+    do {
+        let userNum =parseInt(prompt(`Задайте номер від 1 до ${gameFieldLength}`))
+        let profit =gameFild[userNum-1]
+        sum+=profit
+        alert(`Ваш виграш ${profit}`)
+        gameFild=get
+    } while (confirm(`Ще хочете кидати ? Поточна сума ${sum}`));
+
+    
+}
+game(10)
+
     </script>
 </body>
 
