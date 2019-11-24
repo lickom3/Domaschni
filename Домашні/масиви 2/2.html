@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Знайти суми елементів у вказаній області -->
+
+<body>
+
+    <script>
+        function newArr(rowsCount, colsCount) {
+            let arr = []
+            for (let i = 0; i < rowsCount; i++) {
+                let row = []
+                for (let j = 0; j < colsCount; j++) {
+                    row.push(Math.floor(Math.random() * (10 - 1 + 1)) + 10)
+                }
+                arr.push(row)
+            }
+            return arr
+        }
+        function sum1(arr) {
+            let sum = 0
+            const row = arr.length / 2
+            const cols = arr[0].length / 2
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < cols; j++)
+                    sum += arr[i][j]
+            }
+            return sum
+        }
+        function sum2(arr) {
+            let sum = 0
+            const row = arr.length / 2
+            const cols = arr[0].length / 2
+            for (let i = 0; i < row; i++) {
+                for (let j = cols; j < arr[i].length; j++)
+                    sum += arr[i][j]
+            }
+            return sum
+        }
+        function sum3(arr) {
+            let sum = 0
+            const row = arr.length / 2
+            const cols = arr[0].length / 2
+            for (let i = row; i < arr.length; i++) {
+                for (let j = 0; j < cols; j++)
+                    sum += arr[i][j]
+            }
+            return sum
+        }
+        function sum4(arr) {
+            let sum = 0
+            const row = arr.length / 2
+            const cols = arr[0].length / 2
+            for (let i = row; i < arr.length; i++) {
+                for (let j = cols; j < arr[i].length; j++)
+                    sum += arr[i][j]
+            }
+            return sum
+        }
+        const rowsCount = parseInt(prompt("Введіть парну кількість рядків"))
+        const colsCount = parseInt(prompt("Введіть парну кількість стовпців"))
+        const arr = newArr(rowsCount, colsCount)
+        function printArr(arr) {
+            document.write('<table>')
+            for (let i = 0; i < arr.length; i++) {
+                document.write('<tr>')
+                for (let j = 0; j < arr[i].length; j++)
+                    document.write(`<td>${arr[i][j]}</td>`)
+                document.write('</tr>')
+            }
+            document.write('</table>')
+        }
+        printArr(arr)
+        document.write(`<br>Сумма елементів у 1-ій чверті масива: ${sum1(arr)}`)
+        document.write(`<br>Сумма елементів у 2-ій чверті масива: ${sum2(arr)}`)
+        document.write(`<br>Сумма елементів у 3-ій чверті масива: ${sum3(arr)}`)
+        document.write(`<br>Сумма елементів у 4-ій чверті масива: ${sum4(arr)}`)
+    </script>
+
+
+
+
+</body>
+
+</html>
