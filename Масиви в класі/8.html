@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const autoNumbers=['AA1234AR','A01234AR','KO1234KK','AR1234AR','AC1234cc']
+    const zk=['AO','KO','AA']
+    const zkNumCount = autoNumbers.reduce((res,el)=>{
+        const startLetters=el.substr(0,2)
+       // if (zk.indexOf(startLetters)!=-1) 
+           if (zk.includes(startLetters)) 
+               
+        return res+1
+        else
+        return res
+    },
+    
+    0)
+    
+    </script>
+</body>
+</html>

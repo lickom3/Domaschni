@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //<Бінарний пошук
+      function binarySeach(arr,el){
+let start = 0, end = arr.length-1
+while (start<=end) {
+    let middle =Math.floor((start+end)/2)
+    if (arr[middle]==el)
+    return middle
+    if (arr[middle]>el) 
+    end=middle-1
+    else
+    start=middle+1    
+}
+return -1
+
+      }  
+        
+        
+        </script>
+</body>
+</html>

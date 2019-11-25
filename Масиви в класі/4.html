@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function imputStrArray() {
+          let stringArray = prompt("ВВедіть послідовність років розділених пробілом  ").split(' ')
+          return stringArray
+      }  
+        function convertStringArrayToInt(stringArray) {
+        let arrInt =[] 
+        for (let i = 0; i < stringArray.length; i++) {
+            arrInt.push(parseInt(stringArray[i]))
+        }  
+        return arrInt 
+        }
+        function printPensiones() {
+           for (let i = 0; i < arguments.length; i++) {
+               if (arguments[i<65]) 
+                   document.write(`${i}-${arguments[i]} <br>`)
+               
+               
+           } 
+        }
+        let strArr =imputStrArray()
+        let intArr = convertStringArrayToInt(strArr)
+        printPricesLessThan65(...intArr)
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /*Дано оцінки учня за 5 предметів у 12 бальній шкалі.  Вивести номери предметів, з яких у учня трійки?  */ 
+       const marks_3=[]
+       marks.forEach((el,i) => { if (mark>4 && mark<= 6) 
+       marks_3.push(i+1)    
+       }); 
+        alert(marks_3)
+        
+/*Користувач вводить 10 слів. Підрахувати кількість слів, у яких перша літера і остання літера однакові.*/
+const words =prompt("Введіть слова розділені пробілом").split(' ')
+const w_count = words.reduce(
+    (prevCount,word)=>{
+if (word[0]==word[word.length-1]) 
+return prevCount+1
+else
+return prevCount    
+
+    }
+,0)
+/*(prevCount,word)=>(word[0]==word[word.length-1])?prevCount+1:prevCount,0)*/
+
+/*3.Дано послідовність чисел, які згенеровано випадковим чином. Сформувати новий масив, у якому елементи є більшими за перший елемент.*/
+const length =parseInt(prompt("Кількість елементів"))
+const arr=[]
+for (let i = 0; i < length; i++) {
+   const rndEl=Math.random()
+   arr.push(rndEl)
+    
+}
+const newArr=arr.filter((el,i,arr)=>el>arr[0])
+document.write(`Oridginal: ${arr} <br/>`)
+document.write(`filters: ${newArr}`)
+
+/*Задача 4. Усі елементи введеного масиву помножити на 17. */
+const arr=prompt("введіть елементи через пробіл").split('  ').map(/*el=>el*17*/  el=>parseInt(el)) // коли впевнені железобетонно
+arr.forEach((el,i,arr)=>arr[i]*=17)
+alert(arr)
+
+/*Задача 5. Знайти суму елементів, які знаходяться після елемента зі значенням 78.*/
+const arr=prompt("введіть елементи через пробіл").split('  ').map(/*el=>el*17*/  el=>parseInt(el)) 
+/*if(arr.includes(78)){
+let s=0
+for (let i = arr.indexOf(78+1); i < array.length; i++) {
+  s+=arr[i]
+    
+}
+alert(s)
+}
+else
+alert("немає 78")*/
+const pos78=arr.indexOf(78)
+if (pos78>=0) {
+    let s=0
+    for (let i = pos78+1; i < array.length; i++) {
+      s+=arr[i]
+        
+    }
+    alert(s)
+} else 
+    alert("немає 78")
+
+</script>
+</body>
+</html>

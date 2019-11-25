@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Дано ціни товарів. Визначити, скільки товарів може купити користувач за наявну  у нього кількість товарів 
+      let prices = [1250,500,600,789]  
+       let money =700 
+       function countProductsCount(money,prices) {
+          let count = 0 
+          for (let i = 0; i < prices.length; i++) {
+          if (money>=prices[i]) 
+             count++ 
+          
+              
+          }
+          return count
+       } 
+        let resultCount =countProductsCount(money,prices)
+        document.write(`Result:  ${resultCount}     `)
+        
+        
+        
+        </script>
+</body>
+</html>

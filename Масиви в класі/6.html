@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const payments = [1500,2100,1400,158,1563,2587,1500,2100,1400,158,1563,2587]    
+   function firstYarHalf(payments) {
+       let sum =0
+       for (let i = 0; i < payments.length/2; i++) {
+      sum+=payments[i]
+                }
+       return sum
+   }     
+   function secondYarHalf(payments) {
+       let sum =0
+       for (let i = payments.length/2; i < payments.length; i++) {
+      sum+=payments[i]
+                   }
+        return sum 
+   }     
+   function forSummer(payments) {
+       let sum =0
+       for (let i = 5; i <= 7; i++) {
+      sum+=payments[i]
+        }
+        return sum 
+   }     
+   function forSecondQuarter(payments) {
+       let sum =0
+       for (let i = 3; i <= 5; i++) {
+      sum+=payments[i]
+        }
+        return sum 
+   } 
+   let half1 =firstYarHalf(payments)    
+     document.write(` 1 Half ${half1}<br>`)   
+     
+     let half2 =secondYarHalf(payments)    
+     document.write(` 2 Half ${half2} <br>`)
+      
+     let half3 =forSummer(payments)    
+     document.write(` 3 Half ${half3} <br>`)
+     
+     let half4 =forSecondQuarter(payments)    
+     document.write(` 4 Half ${half4} <br>`)
+     </script>
+</body>
+</html>

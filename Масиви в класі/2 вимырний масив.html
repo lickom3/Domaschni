@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ /* Зберігаємо прибуток магазину кожного дня тижня (m днів), протягом N тижнів.
+ Знайти:*/
+ /*const profit = [
+[120.2100,3000,2700]
+[120.2100,3000,2700]
+[120.2100,3000,2700]
+ ]*/
+ 
+ const daysCount =parseInt(prompt("Кількість робочих днів"))
+ const weeksCount =parseInt(prompt("Кількість тижнів"))
+ const profit = []
+ for (let week = 0; week < weeksCount; week++) {
+     const weekProfit=[]
+     for (let day = 0; day <daysCount; day++) {
+         const dayProfit =parseInt(prompt(`Тиждень = ${week} День = ${day}`))
+         weekProfit.push(dayProfit)
+       }
+     profit.push(weekProfit)
+ }
+// 1. Сумарний прибуток 
+let sum =0
+for (let week  = 0; week  <weeksCount; week ++) {
+    for (let day  = 0; day  <daysCount; day ++) {
+    sum+=profit[week][day]
+}
+    
+}
+//2.Прибуток за кожен тиждень окремо
+
+for (let week  = 0; week  <weeksCount; week ++) {
+    let sum =0
+    for (let day  = 0; day  <daysCount; day ++) {
+    sum+=profit[week][day]
+}
+    alert(sum)
+}
+//3.Сума за усі понеділки
+let sum =0
+for (let week  = 0; week  <weeksCount; week ++) {
+    sum+=profit[week][0]
+
+}
+alert(sum)
+        </script>
+</body>
+</html>

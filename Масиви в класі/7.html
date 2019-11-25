@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const marks = [8,3,5,2,7,9,10,12]   
+        function getAverage(marks) {
+          let sum =0
+          for (let i = 0; i< marks.length; i++)   {            
+          sum+= marks[i]
+        } 
+        let average= sum/marks.length
+        return average
+        }
+        function getCategory(marks) {
+        let min = marks[0]
+   for (let i = 1; i < marks.length; i++) {
+       if ( min > marks[i]) 
+           min=marks[i]
+       
+       switch (min) {
+           case 1:
+           case 2:
+           case 3: return `двійочник`  
+           case 4:
+           case 5:
+           case 6:  return `трійочник`  
+           case 7:
+           case 8:
+           case 9:  return `хорошист`  
+           case 10:
+           case 11:
+           case 12:  return `відмінник` 
+           default:return `помилка` 
+           
+       }
+   }
+        
+        
+        
+}
+       document.write(`Average : ${getAverage} <br>
+       Category ${getCategory} <br>`)
+       
+       </script>
+</body>
+</html>
